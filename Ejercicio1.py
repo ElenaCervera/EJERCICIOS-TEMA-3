@@ -5,3 +5,30 @@
 # encima de otro más pequeño. Se dijo a los sacerdotes que, cuando hubieran terminado de mover los discos, llegaría el fin del mundo.
 #  Resolver este problema de la Torre de Hanói.
 
+class nodoCola(object):
+    info, sig = None, None
+
+class Cola(object):
+    def __init__(self):
+        self.frente, self.final = None, None
+        self.tamano=0
+    def arribo(cola, dato):
+        nodo=nodoCola()
+        nodo.info = dato
+        if cola.frente is None:
+            cola.frente=nodo
+        else:
+            cola.final.sig=nodo
+        cola.final=nodo
+        cola.tamano += 1
+
+    def atencion(cola):
+        dato=cola.frente.info
+        cola.frente =cola.frente.sig
+        if cola.frente is None:
+            cola.final=None
+        cola.tamano -= 1
+        return dato
+        
+                
+
