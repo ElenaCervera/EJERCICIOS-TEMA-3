@@ -29,6 +29,8 @@ class Cola(object):
             cola.final=None
         cola.tamano -= 1
         return dato
-        
-                
+
+Aguja1=Cola()
+Aguja2=Cola()
+Aguja3=Cola()               
 

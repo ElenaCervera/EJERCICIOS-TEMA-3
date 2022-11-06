@@ -5,29 +5,14 @@ def creamatriz(n):
         matriz.append([])
         for j in range(n):
             matriz[i].append(0)
-    return matriz
+    return matriz        
 
-def multiplicar(n):
-    n1= int(n[0][0]*n[1][1]*n[2][2])
-    n2= int(n[1][0]*n[2][1]*n[0][2])
-    n3= int(n[2][0]*n[0][1]*n[1][2])   
-    ntotal=n1+n2+n3
-    return ntotal
-
-def invers(n):
-    inversa=[]
-    for i in n:
-        t=i[::-1]
-        inversa.append(t)
-    return inversa
-
+    
 def det(n):
-    matriz=creamatriz(n)
-    matinvers=invers(matriz)
-    determinante=multiplicar(matriz) - multiplicar(matinvers)     
-    return determinante
+    sarrus=((n[0][0]*n[1][1]*n[2][2])+(n[0][1]*n[1][2]*n[2][0])+(n[0][2]*f2[1][0]*f3[2][1])-(f1[2][0]*f2[1][1]*n[0][2])+(n[2][1]*n[1][2]*n[0][0])+(n[2][2]*n[1][0]*n[0][1]))
+   
+    return sarrus
 
-n=[3,5,8]
-det(n)    
+n=int(input("Matriz:"))
 
-
+det(n)
